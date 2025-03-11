@@ -15,7 +15,7 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    color: #333;
+    color: #eee;
 }
 
 body {
@@ -33,22 +33,23 @@ a:focus {
     color: #7b7b7b;
 }
 
+.lightcolor, .darkcolor-hover:hover {
+    color: #eee!important;
+    background-color: #3e3e42!important;
+}
+
+.darkcolor, .lightcolor-hover:hover {
+    color: #eee!important;
+    background-color: #2d2d30!important;
+}
+
 footer {
-    color: #fff;
+    color: #eee;
     background-color: #222;
 }
 
 footer a {
-    color: #fff;
-}
-
-footer h5 {
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.w3-button {
-    width: auto;
+    color: #eee;
 }
 
 .topnav-right {
@@ -103,11 +104,11 @@ code .c1 {
 .w3-button {
     width: auto;
     border-radius: 15px;
-    border: 1px solid #000;
+    border: 1px solid #1e1e1e;
 }
 
 .w3-button:hover {
-    box-shadow: inset 0 0 0 1px #fff;
+    box-shadow: inset 0 0 0 1px #1e1e1e;
 }
 
 .w3-border .w3-button {
