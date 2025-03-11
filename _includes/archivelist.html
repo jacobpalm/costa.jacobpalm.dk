@@ -13,25 +13,27 @@
 					<a href="{{ site.baseURL }}/archive.html" class="w3-bar-item w3-border-bottom w3-mobile w3-center activeitem">Version {{ archiveversion.title }}</a>
 					<div class="w3-content" style="padding: 16px;" id="expandeditem">
 						<div class="w3-center">
-							<h2>Version {{ page.title }}</h2>
-							{% if page.unavailable %}
-								<div class="posttime">
-									Unreleased<br>
-									&nbsp;
-								</div>
-							{% else %}
-								<div class="posttime">Released on the {% assign day = page.date | date: "%-d"  %}
-									{% case day %}
-									{% when '1' or '21' or '31' %}{{ day }}st
-									{% when '2' or '22' %}{{ day }}nd
-									{% when '3' or '23' %}{{ day }}rd
-									{% else %}{{ day }}th
-									{% endcase %}
-									{{ page.date | date: "of %B, %Y" }}<br>
-									&nbsp;
-								</div>
-								<a href="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png"><img class="w3-image" src="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png" alt="Screenshot of Costa {{ page.title }}"></a>
-							{% endif %}
+							<article>
+								<h2>Version {{ page.title }}</h2>
+								{% if page.unavailable %}
+									<div class="posttime">
+										Unreleased<br>
+										&nbsp;
+									</div>
+								{% else %}
+									<div class="posttime">Released on the <time>{% assign day = page.date | date: "%-d"  %}
+										{% case day %}
+										{% when '1' or '21' or '31' %}{{ day }}st
+										{% when '2' or '22' %}{{ day }}nd
+										{% when '3' or '23' %}{{ day }}rd
+										{% else %}{{ day }}th
+										{% endcase %}
+										{{ page.date | date: "of %B, %Y" }}</time><br>
+										&nbsp;
+									</div>
+									<a href="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png"><img class="w3-image" src="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png" alt="Screenshot of Costa {{ page.title }}"></a>
+								{% endif %}
+							</article>
 						</div>
 						{{ content | markdownify }}
 						{% unless page.unavailable %}
