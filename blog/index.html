@@ -60,7 +60,7 @@ title: Blog
                 {% if page > minpage %}
                     {% if page < maxpage %}
                         {% if page == paginator.page %}
-                            <a class="w3-bar-item w3-button">{{ page }}</a>
+                            <a class="w3-bar-item w3-button activeitem">{{ page }}</a>
                         {% elsif page == 1 %}
                             <a class="w3-bar-item w3-button" href="{{ '/blog' | relative_url }}#post1">{{ page }}</a>
                         {% else %}

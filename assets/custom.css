@@ -126,21 +126,17 @@ code .c1 {
     background-color: #eee!important;
 }
 
-.w3-border .w3-button {
-    border-radius: 0px;
-}
-
 .w3-bar-block .w3-bar-item {
     color: #eee;
     background-color: #1e1e1e;
 }
 
-.w3-bar-block .w3-bar-item:hover {
+.w3-bar-block .w3-bar-item:hover, .activeitem {
     color: #1e1e1e!important;
     background-color: #eee!important;
 }
 
-.w3-bar-block .w3-bar-item a {
+a.w3-bar-item {
     text-decoration: none;
 }
 
