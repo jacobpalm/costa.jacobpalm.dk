@@ -60,30 +60,30 @@ title: Blog
                 {% if page > minpage %}
                     {% if page < maxpage %}
                         {% if page == paginator.page %}
-                            <a class="w3-bar-item w3-button activeitem">{{ page }}</a>
+                            <a class="w3-bar-item w3-button noround activeitem">{{ page }}</a>
                         {% elsif page == 1 %}
-                            <a class="w3-bar-item w3-button" href="{{ '/blog' | relative_url }}#post1">{{ page }}</a>
+                            <a class="w3-bar-item w3-button noround" href="{{ '/blog' | relative_url }}#post1">{{ page }}</a>
                         {% else %}
-                            <a class="w3-bar-item w3-button" href="{{ site.paginate_path | relative_url | replace: ':num', page }}#post1">{{ page }}</a>
+                            <a class="w3-bar-item w3-button noround" href="{{ site.paginate_path | relative_url | replace: ':num', page }}#post1">{{ page }}</a>
                         {% endif %}
                     {% else %}
                         {% unless maxshown %}
                             {% assign maxshown = true %}
-                            <a class="w3-bar-item w3-button w3-disabled w3-hide-small"><span>&middot;&middot;&middot;</span></a>
+                            <a class="w3-bar-item w3-button noround w3-disabled w3-hide-small"><span>&middot;&middot;&middot;</span></a>
                         {% endunless %}
                     {% endif %}
                 {% else %}
                     {% unless minshown %}
                         {% assign minshown = true %}
-                        <a class="w3-bar-item w3-button w3-disabled w3-hide-small"><span>&middot;&middot;&middot;</span></a>
+                        <a class="w3-bar-item w3-button noround w3-disabled w3-hide-small"><span>&middot;&middot;&middot;</span></a>
                     {% endunless %}
                 {% endif %}
             {% endfor %}
 
             {% if paginator.next_page %}
-                <a class="w3-bar-item w3-button" href="{{ paginator.next_page_path | relative_url }}#post1"><span>&raquo;</span></a>
+                <a class="w3-bar-item w3-button noround" href="{{ paginator.next_page_path | relative_url }}#post1"><span>&raquo;</span></a>
             {% else %}
-                <a class="w3-bar-item w3-button w3-disabled"><span>&raquo;</span></a>
+                <a class="w3-bar-item w3-button noround w3-disabled"><span>&raquo;</span></a>
             {% endif %}
         </div>
                

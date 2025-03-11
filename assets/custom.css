@@ -140,6 +140,10 @@ a.w3-bar-item {
     text-decoration: none;
 }
 
+.noround {
+    border-radius: 0px!important;
+}
+
 @media print {
     .hidden-print {
       display: none !important;
