@@ -21,7 +21,7 @@
 										&nbsp;
 									</div>
 								{% else %}
-									<div class="posttime">Released on the <time>{% assign day = page.date | date: "%-d"  %}
+									<div class="posttime">Released on the <time datetime="{% page.date %}">{% assign day = page.date | date: "%-d"  %}
 										{% case day %}
 										{% when '1' or '21' or '31' %}{{ day }}st
 										{% when '2' or '22' %}{{ day }}nd
