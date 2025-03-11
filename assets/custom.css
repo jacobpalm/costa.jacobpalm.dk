@@ -48,6 +48,21 @@ footer {
     background-color: #222;
 }
 
+.menubar {
+    color: #eee;
+    background-color: #222;
+}
+
+.menubar a {
+    color: #eee;
+    background-color: #222;
+}
+
+.menubar a:hover {
+    color: #222;
+    background-color: #eee;
+}
+
 footer a {
     color: #eee;
 }
