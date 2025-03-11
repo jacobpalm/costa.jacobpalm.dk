@@ -130,6 +130,20 @@ code .c1 {
     border-radius: 0px;
 }
 
+.w3-bar-block .w3-bar-item {
+    color: #eee;
+    background-color: #1e1e1e;
+}
+
+.w3-bar-block .w3-bar-item:hover {
+    color: #1e1e1e!important;
+    background-color: #eee!important;
+}
+
+.w3-bar-block .w3-bar-item a {
+    text-decoration: none;
+}
+
 @media print {
     .hidden-print {
       display: none !important;
