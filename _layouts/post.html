@@ -4,22 +4,24 @@ layout: default
 <div class="w3-row-padding darkcolor w3-padding-32 w3-container">
     <div class="w3-content blogpost">
         <div class="w3-center">
-            <h1>{{ page.title }}</h1>
-            <div class="posttime">Posted on the {% assign day = page.date | date: "%-d"  %}
-                {% case day %}
-                    {% when '1' or '21' or '31' %}{{ day }}st
-                    {% when '2' or '22' %}{{ day }}nd
-                    {% when '3' or '23' %}{{ day }}rd
-                {% else %}
-                    {{ day }}th
-                {% endcase %}
-                {{ page.date | date: "of %B, %Y" }}<br>
-                &nbsp;
+            <article>
+                <h1>{{ page.title }}</h1>
+                <div class="posttime">Posted on the <time>{% assign day = page.date | date: "%-d"  %}
+                    {% case day %}
+                        {% when '1' or '21' or '31' %}{{ day }}st
+                        {% when '2' or '22' %}{{ day }}nd
+                        {% when '3' or '23' %}{{ day }}rd
+                    {% else %}
+                        {{ day }}th
+                    {% endcase %}
+                    {{ page.date | date: "of %B, %Y" }}<br></time>
+                    &nbsp;
+                </div>
+                {% if page.image %}
+                    <a href="{{"/assets/img/blog/" | prepend: site.baseurl | append : page.image}}"><img class="w3-image" src="{{"/assets/img/blog/" | prepend: site.baseurl | append : page.image}}"></a>
+                {% endif %}
             </div>
-            {% if page.image %}
-                <a href="{{"/assets/img/blog/" | prepend: site.baseurl | append : page.image}}"><img class="w3-image" src="{{"/assets/img/blog/" | prepend: site.baseurl | append : page.image}}"></a>
-            {% endif %}
-        </div>
-        {{ content | markdownify }}
+            {{ content | markdownify }}
+        </article>
     </div>
 </div>
