@@ -21,14 +21,7 @@
 										&nbsp;
 									</div>
 								{% else %}
-									<div class="posttime">Released on the <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% assign day = page.date | date: "%-d"  %}
-										{% case day %}
-										{% when '1' or '21' or '31' %}{{ day }}st
-										{% when '2' or '22' %}{{ day }}nd
-										{% when '3' or '23' %}{{ day }}rd
-										{% else %}{{ day }}th
-										{% endcase %}
-										{{ page.date | date: "of %B, %Y" }}</time><br>
+									<div class="posttime">Released <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date_to_long_string: "ordinal", "US" }}</time><br>
 										&nbsp;
 									</div>
 									<a href="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png"><img class="w3-image" src="{{ site.baseURL }}/assets/img/archive/{{ page.title | remove: '.' }}.png" alt="Screenshot of Costa {{ page.title }}"></a>
