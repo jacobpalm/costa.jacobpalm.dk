@@ -14,14 +14,7 @@ title: Blog
     <div class="w3-row-padding w3-padding-32 w3-container {% cycle 'lightcolor', 'darkcolor' %}" id="post{{ forloop.index }}">
         <div class="w3-content">
             <h2>{{ post.title }}</h2>
-            <div class="posttime">Posted on the <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{% assign day = post.date | date: "%-d"  %}
-                {% case day %}
-                    {% when '1' or '21' or '31' %}{{ day }}st
-                    {% when '2' or '22' %}{{ day }}nd
-                    {% when '3' or '23' %}{{ day }}rd
-                    {% else %}{{ day }}th
-                {% endcase %}
-                {{ post.date | date: "of %B, %Y" }}</time>
+            <div class="posttime">Posted <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date_to_long_string: "ordinal", "US" }}</time>
             </div>
             {% if post.image %}
                 <div class="w3-row">
