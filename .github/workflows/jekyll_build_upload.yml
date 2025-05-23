@@ -45,3 +45,4 @@ jobs:
           local_dir: "./_site"
           remote_dir: "/"
           delete: "false"
+          ftp_ssl_allow: "true"
