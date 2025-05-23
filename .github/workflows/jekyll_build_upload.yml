@@ -42,5 +42,6 @@ jobs:
           server: ${{ secrets.FTP_ADDRESS }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PWD }}
-          protocol: 'FTPS'
+          protocol: ftps
+          log-level: verbose
           local-dir: './_site/'
