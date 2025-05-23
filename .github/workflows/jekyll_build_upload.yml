@@ -36,13 +36,11 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
-      - name: Upload from output to a remote server via FTP
-        uses: modern-dev/ftp-mirror@v2
+      - name: Sync files with FTP server
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_ADDRESS }}
-          user: ${{ secrets.FTP_USER }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PWD }}
-          local_dir: "./_site"
-          remote_dir: "/"
-          delete: "false"
-          ftp_ssl_allow: "true"
+          protocol: 'FTPS'
+          local-dir: '.\_site'
