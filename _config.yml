@@ -3,6 +3,7 @@ description: Costa is a small and lightweight GUI (Graphical User Interface) for
 author: Jacob Palm
 markdown: kramdown
 baseURL: https://costa.jacobpalm.dk
+exclude: readme.md
 
 paginate: 5
 paginate_path: "/blog/page:num/"
