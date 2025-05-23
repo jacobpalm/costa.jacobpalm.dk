@@ -44,4 +44,4 @@ jobs:
           password: ${{ secrets.FTP_PWD }}
           protocol: ftps
           log-level: verbose
-          local-dir: '/github/workspace/_site/'
+          local-dir: './_site/'
